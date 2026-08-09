@@ -3,7 +3,7 @@ import altStyles from './styles/alt';
 import type { AgendaStyleSet } from './styles/types';
 
 // Switch which visual theme is shown: 'default' or 'alt'
-const ACTIVE_STYLE: 'default' | 'alt' = 'default';
+const ACTIVE_STYLE: 'default' | 'alt' = 'alt';
 
 const STYLE_SETS: Record<'default' | 'alt', AgendaStyleSet> = { default: defaultStyles, alt: altStyles };
 const styles = STYLE_SETS[ACTIVE_STYLE];
