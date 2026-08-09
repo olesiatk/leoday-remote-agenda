@@ -1,4 +1,3 @@
-import React from 'react';
 export default function Agenda() {
   return (
     <div style={{ fontFamily: "'Source Sans Pro', sans-serif" }}>

@@ -8,7 +8,7 @@ export default defineConfig({
     federation({
       name: 'remoteAgenda',
       filename: 'remoteEntry.js',
-      exposes: { './Agenda': './src/Agenda.jsx' },
+      exposes: { './Agenda': './src/Agenda.tsx' },
       shared: ['react', 'react-dom']
     })
   ],
