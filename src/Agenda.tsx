@@ -1,10 +1,20 @@
+import defaultStyles from './styles/default';
+import altStyles from './styles/alt';
+import type { AgendaStyleSet } from './styles/types';
+
+// Switch which visual theme is shown: 'default' or 'alt'
+const ACTIVE_STYLE: 'default' | 'alt' = 'default';
+
+const STYLE_SETS: Record<'default' | 'alt', AgendaStyleSet> = { default: defaultStyles, alt: altStyles };
+const styles = STYLE_SETS[ACTIVE_STYLE];
+
 export default function Agenda() {
   return (
-    <div style={{ fontFamily: "'Source Sans Pro', sans-serif" }}>
-      <h3 style={{ color: '#57B12D', margin: '0 0 10px 0', fontFamily: "'Montserrat', sans-serif", fontWeight: 700, textTransform: 'uppercase' }}>📆 Today's Agenda</h3>
-      <div style={{ fontSize: '14px', color: '#8b949e' }}>
-        <div>11:00 AM — Morning Sync ☕</div>
-        <div>18:00 PM — Microfrontend Webinar 🚀</div>
+    <div style={styles.container}>
+      <h3 style={styles.title}>📆 Today's Agenda</h3>
+      <div style={styles.list}>
+        <div style={styles.item}>11:00 AM — Morning Sync ☕</div>
+        <div style={styles.item}>18:00 PM — Microfrontend Webinar 🚀</div>
       </div>
     </div>
   );
